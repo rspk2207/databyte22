@@ -1,0 +1,42 @@
+<%- include('partials/header.ejs') -%>
+
+<div style="margin-left: 40%; margin-right: 30%; margin-top: 1%;" >
+    <strong>DATABYTE BLOG INPUT SESSION</strong>
+</div>
+<div class="container " style="margin-top: 2%; background-color: #393e46; position: relative; margin-bottom: 1%;border-radius: 2%; padding-top: 1%; padding-bottom: 1%;">
+<form action="/disp" method="post" enctype="multipart/form-data" accept="image/*" style="color: white;">
+    <div class="form-row align-items-center">
+    <div class="form-group col-auto">
+    <label for="author">Name of the author:</label>
+    <input class="form-control" type="text" name="author" placeholder="Enter the name of the author" id="author"/>
+    <br>
+    </div>
+    <div class="form-group col-auto">
+    <label for="title" >Title of the post:</label>
+    <input class="form-control" type="text" name="title" placeholder="Enter the title" id="title"/>
+    <br>
+    </div>
+    <div class="form-group col-auto">
+    <label for="date" >Date of upload:</label>
+    <input class="form-control" type="date" name="date" placeholder="Choose the date" id="date"/>
+    <br>
+    </div>
+    <div class="form-group col-auto">
+    <label for="data" >Content of the post:</label>
+    <textarea class="form-control" type="data" rows="25" cols="auto" name="data" placeholder="Enter the content here" id="data"></textarea>
+    <br>
+    </div>
+    <div class="form-group col-auto">
+    <label for="image" >Images supporting the post:</label>
+    <input class="form-control" type="file" name="image" id="image" multiple placeholder="Author Name"/>
+    <br>
+    </div>
+    <input 
+    type="submit" 
+    class="btn btn-outline-secondary align-self-center "
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"/> 
+</div>
+</form>
+</div>
+<%- include('partials/footer.ejs') -%>

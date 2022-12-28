@@ -1,0 +1,39 @@
+<%- include("partials/header") -%>
+
+<div class = "blogpost">
+    <div class="animate__animated animate__fadeIn animate_slower">
+    <h2 class="display-4 fst-italic">
+      <%= post.title %>
+    </h2>
+    <i> <%= post.author %> on <%= post.date.toLocaleDateString() %> </i>
+    <!-- Author -->
+    <!-- Date -->
+    <p class="lead my-4" style = "font-size: 18px">
+    <span style="white-space: pre-line;"> <%= post.data %> </span>
+    </span>
+      <br>
+      <% for(var i=0 ; i < post.image.length ; i++) { %>
+      <img src="data:<%= post.image[i].contentType %>;base64,<%= post.image[i].data.toString('base64') %>" width="50%" height="50%" style="margin-left: 25%;">
+      <br>
+      <% } %>
+    </p>
+    <!--
+    <p class="lead mb-0">
+      <a href="#" class="text-white fw-bold">
+          <!-- Button linking to individual page for the post determined by parameters -->
+    <!--
+          <button
+          type="button"
+          class="btn btn-outline-secondary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Read More...
+        </button></a>
+    </p>
+    -->
+      <br>
+</div>
+</div>
+
+<%- include("partials/footer") -%>

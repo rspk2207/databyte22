@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DATABYTE BLOGS</title>
+        <link rel="stylesheet" href="">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="navbar"></div>
+        <% include("index.ejs") %>
+        <% for(var i=0;i< blogs.length; i++) { %>
+        <%= blogs[i].author %>
+        <%= blogs[i].title %>
+        <%= blogs[i].date %>
+        <%= blogs[i].data %>
+        <% for(var j=0;j < blogs[i].image.length ; j++) { %>
+            <img src="data:<%= blogs[i].image[j].contentType %>;base64,<%= blogs[i].image[j].data.toString('base64') %>"> %>
+            <% } %>
+        <% } %>
+    </body> 
+</html>
